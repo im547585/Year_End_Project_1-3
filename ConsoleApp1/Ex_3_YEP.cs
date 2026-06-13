@@ -46,7 +46,25 @@ namespace ConsoleApp1
             Cities.Add("Сопот");
             Random rnd = new Random();
             int[] MaxLenght = new int[7];
-            Console.WriteLine($"{PhraseОfPraise[rnd.Next(PhraseОfPraise.Count)]}, {PraiseworthyEvents[rnd.Next(PraiseworthyEvents.Count)]}, {FirstName[rnd.Next(FirstName.Count)]} {SecondName[rnd.Next(SecondName.Count)]}, {Cities[rnd.Next(Cities.Count)]}.");
+            Console.WriteLine("Искаш ли да добавиш данни? ДА/НЕ");
+            string Answer = Console.ReadLine().ToUpperInvariant();
+            if (Answer == "ДА")
+            {
+                List<string> NewData = new List<string>();
+                Console.WriteLine("Колко елемента ще съдържа?");
+                int HAnswer = int.Parse(Console.ReadLine());
+                for (int i = 0; i < HAnswer; i++)
+                {
+                    Console.WriteLine($"Въведи елемент #{i+1}: ");
+                    var HEAsnwer = Console.ReadLine();
+                    NewData.Add(HEAsnwer);
+                }
+                Console.WriteLine($"{PhraseОfPraise[rnd.Next(PhraseОfPraise.Count)]}, {PraiseworthyEvents[rnd.Next(PraiseworthyEvents.Count)]}, {FirstName[rnd.Next(FirstName.Count)]} {SecondName[rnd.Next(SecondName.Count)]}, {Cities[rnd.Next(Cities.Count)]}, {NewData[rnd.Next(NewData.Count)]}.");
+            }
+            else
+            {
+                Console.WriteLine($"{PhraseОfPraise[rnd.Next(PhraseОfPraise.Count)]}, {PraiseworthyEvents[rnd.Next(PraiseworthyEvents.Count)]}, {FirstName[rnd.Next(FirstName.Count)]} {SecondName[rnd.Next(SecondName.Count)]}, {Cities[rnd.Next(Cities.Count)]}.");
+            }
             Console.ResetColor();
         }
     }
