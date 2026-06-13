@@ -57,7 +57,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine($"Въведи елемент #{i+1}: ");
                     var HEAsnwer = Console.ReadLine();
-                    NewData.Add(HEAsnwer);
+                    NewData.AddRange( HEAsnwer );
                 }
                 Console.WriteLine($"{PhraseОfPraise[rnd.Next(PhraseОfPraise.Count)]}, {PraiseworthyEvents[rnd.Next(PraiseworthyEvents.Count)]}, {FirstName[rnd.Next(FirstName.Count)]} {SecondName[rnd.Next(SecondName.Count)]}, {Cities[rnd.Next(Cities.Count)]}, {NewData[rnd.Next(NewData.Count)]}.");
             }
