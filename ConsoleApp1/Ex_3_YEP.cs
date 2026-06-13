@@ -8,6 +8,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.DarkMagenta;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("----------------------------------\n" +
+            "| Exercise #3 / Year-End Project |\n" +
+            "----------------------------------\n");
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
             List<string> PhraseОfPraise = new List<string>();
             PhraseОfPraise.Add("Продуктът е отличен.");
             PhraseОfPraise.Add("Това е страхотен продукт.");
@@ -39,6 +47,7 @@ namespace ConsoleApp1
             Random rnd = new Random();
             int[] MaxLenght = new int[7];
             Console.WriteLine($"{PhraseОfPraise[rnd.Next(PhraseОfPraise.Count)]}, {PraiseworthyEvents[rnd.Next(PraiseworthyEvents.Count)]}, {FirstName[rnd.Next(FirstName.Count)]} {SecondName[rnd.Next(SecondName.Count)]}, {Cities[rnd.Next(Cities.Count)]}.");
+            Console.ResetColor();
         }
     }
 }
